@@ -1,23 +1,45 @@
 # Templates
 
-Starter templates for common presentation types. Each template provides a pre-structured project that inherits Presentation OS standards and is ready to customize for a specific presentation.
+Starter templates for presentation projects. Each template provides a pre-structured project that inherits Presentation OS standards and is ready to customize.
 
 ---
 
-## Status
+## Available Templates
 
-Templates are planned for Phase 3 of the Presentation OS roadmap.
+### project-starter
+
+The universal starter template for any new presentation project.
+
+Copy it, rename it, and it becomes your new presentation repo — outside of Presentation OS, with a full connection back to the framework via `PRESENTATION_OS.md`.
+
+**Contents:** `CLAUDE.md`, `README.md`, `PRESENTATION_OS.md`, `docs/` (7 structured templates), `slides/`, `assets/`, `references/`
+
+**How to use:**
+1. Copy `templates/project-starter/` to your desired location
+2. Rename the directory to your project slug
+3. `git init && git branch -m main`
+4. Update `PRESENTATION_OS.md` — set local framework path, confirm version
+5. Update `CLAUDE.md` — fill in title, audience, goal, constraints
+6. Complete `docs/project-brief.md` before writing any slide content
+
+See `docs/project-bootstrap.md` for the full guide.
 
 ---
 
-## Using a Template
+## Planned Type-Specific Templates
 
-When templates are available:
+Type-specific templates (pre-structured narrative architecture for common presentation formats) are planned for a future milestone.
 
-1. Copy the template directory to your project location
-2. Rename to match your presentation slug
-3. Update the project `CLAUDE.md` with your audience, goal, and constraints
-4. Begin at Phase 2 (Architecture) — the template provides the structural scaffolding
+| Template | Primary Audience | Narrative Structure |
+|---|---|---|
+| `technical-deep-dive` | Engineering practitioners | Problem → Context → Approach → Tradeoffs → Recommendation |
+| `executive-presentation` | Leadership, decision-makers | Situation → Complication → Recommendation → Evidence → Ask |
+| `conference-talk` | Mixed technical audience | Hook → Story → Lessons → Call to action |
+| `product-demo` | Customers and prospects | Problem → Demo → Outcomes → Proof → Next steps |
+| `client-pitch` | Client decision-makers | Understanding → Vision → Approach → Proof → Investment → Ask |
+| `workshop` | Active participants | Context → Concepts → Practice → Reflection → Application |
+
+See `docs/project-templates.md` for descriptions of each type.
 
 ---
 

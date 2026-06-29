@@ -33,6 +33,54 @@ Those are implementation choices. Presentation OS delegates to external tools an
 
 ---
 
+## Project Model
+
+Presentation OS is the framework. Presentation projects are separate repositories.
+
+```
+~/Development/
+├── presentation-os/              ← This repo — the framework
+├── working-smarter-ai-workshop/  ← A presentation project
+├── mcp-workshop/                 ← Another presentation project
+└── github-actions-workshop/      ← Another presentation project
+```
+
+### Every Project Includes PRESENTATION_OS.md
+
+Each presentation project contains a `PRESENTATION_OS.md` file in its root. This file:
+- Records the Presentation OS version the project was built against
+- Documents the local framework path and GitHub URL
+- Lists inherited standards
+- Lists active external tools
+- Gives Claude explicit instructions for working across the project and framework
+
+`PRESENTATION_OS.md` is the contract between the project and the framework.
+
+### Project CLAUDE.md vs. Platform CLAUDE.md
+
+| | Platform CLAUDE.md (this file) | Project CLAUDE.md |
+|---|---|---|
+| **Lives in** | Presentation OS repo | Presentation project repo |
+| **Defines** | Universal standards, philosophy, architecture | Audience, goal, branding, constraints |
+| **Changes** | Rarely — framework evolution only | Per project |
+| **Length** | Comprehensive | As short as possible |
+
+Project CLAUDE.md files should be as short as possible — only what is specific to that presentation. Everything universal is inherited from the framework via `PRESENTATION_OS.md`.
+
+### How Claude Works Across Repos
+
+When working in a presentation project, Claude should:
+
+1. Read the project `CLAUDE.md` first — audience, goal, constraints, overrides
+2. Read `PRESENTATION_OS.md` — which framework version and standards are in effect
+3. Apply platform standards as inherited defaults without requiring the user to restate them
+4. Reference framework docs via the local path in `PRESENTATION_OS.md`
+5. Never reproduce platform documentation in the project — only exceptions
+
+See `docs/project-bootstrap.md` for the full project model and bootstrapping guide.
+
+---
+
 ## Architecture
 
 ### Skills Taxonomy

@@ -1,6 +1,21 @@
 # Presentation OS — Roadmap
 
-## Phase 0: Foundation (Current)
+## v0.1.1 — Project Bootstrap (Current)
+
+Enable Presentation OS to scaffold standalone presentation projects that live outside the framework repo.
+
+- [x] `docs/project-bootstrap.md` — project model, separation rationale, Claude workflow guide
+- [x] `docs/project-lifecycle.md` — 10-stage lifecycle from Bootstrap to Archive
+- [x] `templates/project-starter/` — complete starter template for new presentation projects
+- [x] `templates/project-starter/PRESENTATION_OS.md` — framework inheritance contract
+- [x] `templates/project-starter/CLAUDE.md` — project-level context template
+- [x] `templates/project-starter/docs/` — seven structured doc templates
+- [x] Updated `CLAUDE.md` with Project Model section
+- [x] Updated `README.md` with project creation workflow
+
+---
+
+## v0.1.0 — Foundation (Complete)
 
 Establish the platform architecture, documentation standards, and AI collaboration model.
 
@@ -9,8 +24,7 @@ Establish the platform architecture, documentation standards, and AI collaborati
 - [x] Core documentation suite (philosophy, architecture, storytelling, lifecycle, accessibility)
 - [x] External tool integration guides (html-slides, ui-ux-pro-max, future-tools)
 - [x] Skills taxonomy with vision documents (directors / specialists / integrations)
-- [ ] Component library — first components
-- [ ] Template library — first templates
+- [x] Placeholder directories: `components/`, `templates/`, `examples/`
 
 ## Phase 1: Core Skills
 

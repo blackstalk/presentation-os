@@ -6,6 +6,34 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [0.1.1] — 2026-06-29
+
+### Added
+
+- `docs/project-bootstrap.md` — explains the project model (framework vs. project separation), how Claude works across repos, and how to bootstrap a new project
+- `docs/project-lifecycle.md` — 10-stage lifecycle from Bootstrap to Archive / Reuse
+- `templates/project-starter/` — complete starter template for new presentation projects:
+  - `CLAUDE.md` — project context template (audience, goal, constraints, overrides)
+  - `README.md` — project overview template
+  - `PRESENTATION_OS.md` — framework inheritance contract (version, local path, inherited standards, Claude instructions)
+  - `docs/project-brief.md` — brief template with sign-off checklist
+  - `docs/audience.md` — deep audience profile template
+  - `docs/content-outline.md` — story map and slide sketch template
+  - `docs/demo-plan.md` — demo script and safety checklist template
+  - `docs/speaker-notes.md` — notes strategy and timing template
+  - `docs/asset-plan.md` — asset inventory template
+  - `docs/references.md` — sources and research template
+  - `slides/`, `assets/images/`, `assets/diagrams/`, `assets/videos/`, `references/` — directory structure with READMEs
+
+### Updated
+
+- `CLAUDE.md` — added Project Model section (project separation, PRESENTATION_OS.md, how Claude works across repos)
+- `README.md` — added "Creating a New Presentation Project" section with workflow steps
+- `ROADMAP.md` — restructured as versioned milestones; added v0.1.1 as current
+- `templates/README.md` — updated to reflect available project-starter template
+
+---
+
 ## [0.1.0] — 2026-06-29
 
 ### Added

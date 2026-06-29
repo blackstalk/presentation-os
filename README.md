@@ -68,6 +68,30 @@ Every presentation project is a **plug-in** to this system. The system handles t
 2. Read `docs/presentation-lifecycle.md` — the end-to-end workflow
 3. Read `docs/project-templates.md` — how to start a new presentation project
 
+## Creating a New Presentation Project
+
+Presentation projects live **outside** the Presentation OS repo — each in its own repository.
+
+```
+~/Development/
+├── presentation-os/        ← This repo — the framework
+├── my-workshop/            ← A presentation project
+└── client-pitch/           ← Another presentation project
+```
+
+**To start a new presentation project:**
+
+1. Copy `templates/project-starter/` to your desired location and rename it
+2. Initialize a git repo: `git init && git branch -m main`
+3. Update `PRESENTATION_OS.md` — set your local framework path, confirm the version
+4. Update `CLAUDE.md` — fill in title, audience, goal, and constraints
+5. Complete `docs/project-brief.md` before writing any slide content
+6. Follow the project lifecycle: Brief → Outline → Prototype → Design Review → Delivery
+
+See `docs/project-bootstrap.md` for the full guide and `docs/project-lifecycle.md` for the stage-by-stage workflow.
+
+---
+
 ## Philosophy
 
 > Every future presentation should be a project that plugs into this system rather than reinventing presentation architecture.
