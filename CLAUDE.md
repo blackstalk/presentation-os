@@ -4,7 +4,7 @@
 
 ## Vision
 
-Presentation OS is an AI-first platform for designing, reviewing, building, and delivering world-class presentations. It is not a slide generator. It is the operating system that makes every future presentation dramatically easier to create — and dramatically better.
+Presentation OS is an opinionated AI-native framework for designing, reviewing, and delivering world-class presentations. It is not a slide generator. It is the operating system that makes every future presentation dramatically easier to create — and dramatically better.
 
 Every presentation project plugs into this system rather than reinventing architecture from scratch.
 

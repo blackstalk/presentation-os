@@ -1,6 +1,6 @@
 # Presentation OS
 
-A reusable AI-first platform for designing, reviewing, building, and delivering world-class presentations.
+Presentation OS is an opinionated AI-native framework for designing, reviewing, and delivering world-class presentations.
 
 ---
 
