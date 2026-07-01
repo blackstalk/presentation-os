@@ -6,6 +6,38 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [0.2.0] — 2026-07-01
+
+### Framework Evolution: Presentation Architecture
+
+This release introduces the Presentation Architecture Specification (PAS) as a first-class artifact, formalizes the Progressive Fidelity model, and restructures the project lifecycle to reflect how great presentations are actually built — through progressive refinement from abstract to concrete, with stakeholders reviewing prototypes rather than planning documents.
+
+This is the first major framework evolution driven by real project experience (the Working Smarter with AI workshop for Riviana Foods).
+
+### Added
+
+- `docs/presentation-architecture-specification.md` — full PAS standard: what it is, what it contains, the contract model, all ten sections documented
+- `templates/project-starter/docs/presentation-architecture-spec.md` — PAS template for new presentation projects
+
+### Updated
+
+- `docs/philosophy.md` — three new core principles:
+  - **Artifact-Driven Development** — each artifact answers one question; no artifact duplicates another's responsibility
+  - **Progressive Fidelity** — every artifact is more concrete than the one before it (Idea → Brief → Blueprint → PAS → Prototype → Production)
+  - **Presentations as Knowledge Experiences** — broader vision: the framework's principles apply to any knowledge experience, not only presentations
+- `docs/project-lifecycle.md` — restructured from 10 stages to 13 stages:
+  - Stage 3 renamed from "Outline" to "Blueprint" to match artifact naming
+  - Stage 4 (new): PAS — the architectural specification stage
+  - Stage 5 (new): Internal Review — formal internal gate before prototype generation
+  - Stage 6 (new): Prototype — interactive version generated via html-slides (moved from Stage 9)
+  - Stage 7 (new): Stakeholder Review — stakeholders review the prototype, not planning documents
+  - Stage 8: Design Refinement (replaces old Design Review, now also incorporates stakeholder feedback)
+  - Stages 9–13: Demo Buildout, Speaker Notes, Rehearsal, Delivery, Archive (renumbered)
+- `docs/presentation-lifecycle.md` — restructured from 7 phases to 8 phases, with PAS as Phase 3 between Blueprint and Prototype; phase table updated to show artifact and question answered
+- `CLAUDE.md` — added Artifact-Driven Development section with artifact table; updated Presentation Lifecycle table to include PAS and artifact column; added references to new docs
+
+---
+
 ## [0.1.1] — 2026-06-29
 
 ### Added

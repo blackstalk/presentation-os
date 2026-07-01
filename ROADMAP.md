@@ -1,6 +1,19 @@
 # Presentation OS — Roadmap
 
-## v0.1.1 — Project Bootstrap (Current)
+## v0.2.0 — Presentation Architecture (Current)
+
+Introduce the Presentation Architecture Specification (PAS) as a first-class artifact, establishing the full artifact chain from brief to archive. Driven by real project experience building the Working Smarter with AI workshop.
+
+- [x] `docs/presentation-architecture-specification.md` — full PAS standard and contract model
+- [x] `templates/project-starter/docs/presentation-architecture-spec.md` — PAS template
+- [x] `docs/philosophy.md` — Artifact-Driven Development, Progressive Fidelity, Knowledge Experience principles
+- [x] `docs/project-lifecycle.md` — restructured to 13 stages (PAS, Internal Review, Prototype, Stakeholder Review as formal stages)
+- [x] `docs/presentation-lifecycle.md` — restructured to 8 phases with PAS as Phase 3
+- [x] `CLAUDE.md` — updated lifecycle table, artifact-driven section, PAS references
+
+---
+
+## v0.1.1 — Project Bootstrap (Complete)
 
 Enable Presentation OS to scaffold standalone presentation projects that live outside the framework repo.
 
@@ -25,6 +38,8 @@ Establish the platform architecture, documentation standards, and AI collaborati
 - [x] External tool integration guides (html-slides, ui-ux-pro-max, future-tools)
 - [x] Skills taxonomy with vision documents (directors / specialists / integrations)
 - [x] Placeholder directories: `components/`, `templates/`, `examples/`
+
+---
 
 ## Phase 1: Core Skills
 
@@ -66,6 +81,6 @@ Expand the tool ecosystem and MCP server integrations.
 
 ## Long-Term Vision
 
-Presentation OS becomes the default platform for all presentation creation — a stable foundation that each new presentation project inherits without modification.
+Presentation OS becomes the default platform for designing knowledge experiences — presentations first, but the architectural principles apply equally to workshops, documentation, training courses, and interactive learning experiences built on the same artifact-driven foundation.
 
 New presentations add only what is unique to their purpose. Everything else is already done.

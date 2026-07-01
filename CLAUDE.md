@@ -187,19 +187,38 @@ Do not open sections with an agenda slide. Open with a question, a tension, or a
 
 ---
 
+## Artifact-Driven Development
+
+Presentation OS is an artifact-driven framework. Each artifact answers a different question. No artifact duplicates the responsibility of another.
+
+| Artifact | Primary Question |
+|---|---|
+| Project Brief | Why are we building this? |
+| Blueprint | What should the audience learn? |
+| PAS | How will the experience be constructed? |
+| Prototype | Does the architecture work? |
+| Production | Is it ready to deliver? |
+| Archive | What reusable knowledge should be preserved? |
+
+See `docs/philosophy.md` for the full Artifact-Driven and Progressive Fidelity principles.
+
 ## Presentation Lifecycle
 
 See `docs/presentation-lifecycle.md` for the full lifecycle guide.
 
-| Phase | Focus | Key Output |
-|-------|-------|------------|
-| 1. Brief | Audience, goal, constraints | Brief document |
-| 2. Architecture | Narrative structure, section outline | Story map |
-| 3. Content | Slide-by-slide development | Draft deck |
-| 4. Design Review | Visual hierarchy, accessibility | Reviewed deck |
-| 5. Speaker Prep | Pacing, transitions, timing | Speaker notes |
-| 6. Delivery | Generated output | Final file |
-| 7. Retrospective | What worked, what to carry forward | Retro notes |
+| Phase | Question Answered | Key Output | Artifact |
+|-------|-------------------|------------|---------|
+| 1. Brief | Why are we doing this? | Brief document | Project Brief |
+| 2. Blueprint | What should the audience learn? | Story map, learning objectives | Blueprint |
+| 3. PAS | How will the experience be constructed? | presentation-architecture-spec.md | PAS |
+| 4. Prototype | Does the architecture work? | Reveal.js prototype | Prototype |
+| 5. Design Review | Is it visually correct and approved? | Reviewed prototype | — |
+| 6. Speaker Prep | Is the presenter ready? | Speaker notes, rehearsed demos | — |
+| 7. Delivery | Is it delivered? | Final presentation | Production |
+| 8. Retrospective | What do we carry forward? | Retrospective, tagged repo | Archive |
+
+See `docs/project-lifecycle.md` for the full 13-stage operational lifecycle.
+See `docs/presentation-architecture-specification.md` for the full PAS structure and contract model.
 
 ---
 
