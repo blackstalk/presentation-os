@@ -7,10 +7,10 @@ A Presentation OS project moves through thirteen stages from bootstrap to archiv
 ## The Artifact Chain
 
 ```
-Bootstrap → Brief → Blueprint → PAS → Internal Review → Prototype → Stakeholder Review → Design Refinement → Demo Buildout → Speaker Notes → Rehearsal → Delivery → Archive
+Bootstrap → Brief → Blueprint → PAS → Architecture Review → Prototype → Experience Review → Stakeholder Review → Design Refinement → Demo Buildout → Speaker Notes → Rehearsal → Delivery → Archive
 ```
 
-Stages 1–3 produce planning artifacts (why, what). Stages 4–5 produce architectural artifacts (how). Stages 6–7 produce interactive artifacts for review. Stages 8–12 prepare for and execute delivery.
+Stages 1–3 produce planning artifacts (why, what). Stage 4 produces the architectural artifact (how). Stages 5 and 7 are distinct review gates — Architecture Review validates intent before anything is built; Experience Review validates execution after the prototype exists. Stages 8–13 prepare for and execute delivery.
 
 ---
 
@@ -86,26 +86,33 @@ See `docs/presentation-architecture-specification.md` for the full PAS structure
 
 ---
 
-## Stage 5: Internal Review
+## Stage 5: Architecture Review
 
-**Purpose:** Validate the architecture internally before anything is shown externally or built. This is the last checkpoint before generating the prototype.
+**Purpose:** Validate the experience architecture before anything is built. Architecture Review asks: *Is this the right design?* It is not a visual review — nothing visual exists yet. It is a review of narrative coherence, capability coverage, cognitive load, and the implementation contract.
+
+**This is fundamentally different from Experience Review (Stage 7).** Architecture Review happens before the prototype. Experience Review happens after.
 
 **Key questions:**
-- Does the story flow from section to section?
-- Is the pacing right? Too many dense slides in a row?
-- Are there too many demos? Too few audience interaction moments?
-- Is every term introduced before it is used?
-- Does the Learning Journey arc match the intended audience experience?
-- Does the opening tension get resolved by the close?
-- Is every learning objective covered in the slide inventory?
+- Is the narrative coherent from opening to close? Does the opening tension resolve?
+- Is every capability in the Capability Matrix achievable given the slide inventory?
+- Does every capability map to at least one concrete decision outcome?
+- Is the cognitive load balanced across sections — no section overwhelming, no section trivial?
+- Is terminology introduced before it is used?
+- Does the Learning Journey arc feel emotionally true for this specific audience?
+- Are the demos in the right sections, and is the demo density manageable?
+- Does the diagram rendering strategy produce the right experience (fragments vs. separate slides)?
+- Does the Rendering Strategy contain enough information for `html-slides` to build without guessing?
+- Does the Timing Budget add up, and is any section disproportionately long?
 
 **Actions:**
-- Review PAS against the blueprint — does the architecture serve the content strategy?
-- Review `docs/recommended-demos.md` — is the demo load realistic?
-- Review `docs/recommended-diagrams.md` — are the diagrams the right level of complexity?
-- Adjust PAS based on findings
+- Review the Capability Matrix: are capabilities framed as "can do" not "will know"? Are any important capabilities missing?
+- Review the Learning Journey: does the emotional arc feel true?
+- Review the Slide Inventory: count by type — what fraction are substantive teaching slides vs. structural slides?
+- Review the Diagram Inventory: is every rendering decision explicit? Is the fragment vs. separate-slide question resolved?
+- Review Decision Outcomes: does every section enable at least one specific, business-relevant decision improvement?
+- Revise PAS based on findings before proceeding
 
-**Gate:** Internal sign-off on the PAS. No prototype is generated until this stage is complete.
+**Gate:** Architecture Review complete. Specific sign-off required from the project lead before prototype generation begins. PAS readiness checklist must be fully checked.
 
 ---
 
@@ -114,21 +121,49 @@ See `docs/presentation-architecture-specification.md` for the full PAS structure
 **Purpose:** Generate the first interactive version of the presentation using the PAS as the build specification.
 
 **Actions:**
-- Delegate to `html-slides` skill with the completed PAS
+- Delegate to `html-slides` skill with the completed, reviewed PAS
 - Generate full Reveal.js HTML from the slide inventory and rendering strategy
 - Implement all fragment sequences per the animation inventory
 - Create all diagrams per the diagram inventory and rendering decisions
 - Verify all speaker notes are present
 - Verify keyboard navigation works
-- Complete a quick self-review pass: does the prototype match the PAS?
+- Complete a self-review pass: does the prototype match the PAS?
 
 **Gate:** All slides are rendered. The prototype is a faithful implementation of the PAS — not a rough draft. Speaker notes are present. The deck is demonstrable.
 
 ---
 
-## Stage 7: Stakeholder Review
+## Stage 7: Experience Review
 
-**Purpose:** Show the interactive prototype to stakeholders. Humans review visuals, not outlines — this is the first external checkpoint.
+**Purpose:** Validate the experience as built. Experience Review asks: *Does this work?* It can only happen after a prototype exists — these questions cannot be answered from a document.
+
+**This is fundamentally different from Architecture Review (Stage 5).** Architecture Review validates intent. Experience Review validates execution.
+
+**Key questions:**
+- Is the pacing right? Does any section feel too fast or too slow?
+- Do animations help or distract? Do any feel gratuitous?
+- Are slide transitions smooth? Do any feel jarring?
+- Does the opening mystery create genuine curiosity, or does it feel forced?
+- Does the Aha! moment land where intended?
+- Are demos too long? Do they lose the room?
+- Does any slide feel confusing — too much on screen, unclear hierarchy?
+- Does the discussion section feel like a natural landing, or an abrupt stop?
+- Does the Learning Journey progression feel true as experienced (not just as written)?
+
+**Actions:**
+- Walk through the prototype as an audience member — not as a builder reviewing the build
+- Note any moment where you lose focus, feel confused, or want to skip ahead
+- Identify any animation or demo that extends beyond its welcome
+- Flag any slide where the hierarchy isn't immediately clear at a glance
+- Revise the prototype or PAS based on findings
+
+**Gate:** Experience Review complete. The deck is ready for external stakeholders.
+
+---
+
+## Stage 8: Stakeholder Review
+
+**Purpose:** Show the reviewed prototype to stakeholders. Humans review visuals, not outlines — this is the first external checkpoint.
 
 **Actions:**
 - Schedule a review session with key stakeholders
@@ -237,14 +272,15 @@ See `docs/presentation-architecture-specification.md` for the full PAS structure
 |---|---|---|---|
 | 1. Bootstrap | Set up project | Initialized repo | PRESENTATION_OS.md |
 | 2. Brief | Define audience and goal | project-brief.md, audience.md | Project Brief |
-| 3. Blueprint | Content strategy, domain knowledge | content-outline.md, learning-objectives.md | Blueprint |
+| 3. Blueprint | Content strategy, domain knowledge | content-outline.md | Blueprint |
 | 4. PAS | Experience architecture | presentation-architecture-spec.md | PAS |
-| 5. Internal Review | Validate architecture | Approved PAS | — |
+| 5. Architecture Review | Validate intent before building | Approved PAS | — |
 | 6. Prototype | Generate interactive version | index.html | Prototype |
-| 7. Stakeholder Review | External checkpoint | Approved narrative | — |
-| 8. Design Refinement | Polish and resolve feedback | Refined prototype | — |
-| 9. Demo Buildout | Prepare interactive elements | demo-plan.md, tested demos | — |
-| 10. Speaker Notes | Finalize delivery prep | speaker-notes.md | — |
-| 11. Rehearsal | Practice delivery | Full run-through completed | — |
-| 12. Delivery | Deliver | Delivered presentation | Production |
-| 13. Archive | Capture and carry forward | Retrospective, tagged repo | Archive |
+| 7. Experience Review | Validate execution after building | Reviewed prototype | — |
+| 8. Stakeholder Review | External checkpoint | Approved narrative | — |
+| 9. Design Refinement | Polish and resolve feedback | Refined prototype | — |
+| 10. Demo Buildout | Prepare interactive elements | demo-plan.md, tested demos | — |
+| 11. Speaker Notes | Finalize delivery prep | speaker-notes.md | — |
+| 12. Rehearsal | Practice delivery | Full run-through completed | — |
+| 13. Delivery | Deliver | Delivered presentation | Production |
+| 14. Archive | Capture and carry forward | Retrospective, tagged repo | Archive |

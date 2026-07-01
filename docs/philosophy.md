@@ -46,6 +46,18 @@ Every platform decision should be documented so that future sessions can underst
 
 Presentation OS is deliberately implementation-agnostic. The right tool for a given presentation is the one that best serves the audience and the story. Sometimes that is Reveal.js. Sometimes it is a whiteboard. The platform should support any implementation choice without requiring a different architectural approach.
 
+## Every Artifact Ends with a Readiness Checklist
+
+Each artifact in the Presentation OS artifact chain must include a Readiness Checklist — an explicit, checkable list of conditions that must be true before advancing to the next artifact or stage.
+
+A checklist is not a courtesy. It is the gate. "Feels done" is not a gate. "All boxes checked" is a gate.
+
+The checklist serves two purposes: it makes the transition to the next stage deliberate rather than implied, and it gives future collaborators a verifiable record of what was completed before advancing.
+
+**Standard checklist format:** At the end of every template doc, a section titled "Readiness Checklist" (or equivalent) with checkboxes. Every box must be checked before the gate is passed.
+
+See `docs/presentation-architecture-specification.md` for the PAS readiness checklist as a model.
+
 ## Artifact-Driven Development
 
 Presentation OS is an artifact-driven framework. Each artifact answers a different question, and no artifact should duplicate the responsibility of another.
