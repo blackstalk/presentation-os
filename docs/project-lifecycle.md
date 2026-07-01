@@ -7,7 +7,7 @@ A Presentation OS project moves through thirteen stages from bootstrap to archiv
 ## The Artifact Chain
 
 ```
-Bootstrap → Brief → Blueprint → PAS → Architecture Review → Prototype → Experience Review → Stakeholder Review → Design Refinement → Demo Buildout → Speaker Notes → Rehearsal → Delivery → Archive
+Bootstrap → Brief → Blueprint → PAS → Architecture Review → Prototype Objectives → Prototype → Experience Review → Stakeholder Review → Design Refinement → Demo Buildout → Speaker Notes → Rehearsal → Delivery → Archive
 ```
 
 Stages 1–3 produce planning artifacts (why, what). Stage 4 produces the architectural artifact (how). Stages 5 and 7 are distinct review gates — Architecture Review validates intent before anything is built; Experience Review validates execution after the prototype exists. Stages 8–13 prepare for and execute delivery.
@@ -116,7 +116,27 @@ See `docs/presentation-architecture-specification.md` for the full PAS structure
 
 ---
 
-## Stage 6: Prototype
+## Stage 6: Prototype Objectives
+
+**Purpose:** Define what Prototype v0.1 is for — what it will validate and what it explicitly will not optimize. This short document gives the builder permission to ship an intentionally imperfect prototype, and gives the reviewer a clear success criterion.
+
+**The Prototype Objectives document answers one question:** *What are we validating in Prototype v0.1?*
+
+**Actions:**
+- Create `docs/prototype-objectives.md`
+- List what will be validated (narrative, navigation, fragment timing, diagram readability, theme direction)
+- List what will NOT be optimized in v0.1 (pixel perfection, motion polish, speaker notes, performance)
+- Write one specific success criterion for the prototype
+
+**Success criterion format:** *"Can an internal reviewer experience the presentation from beginning to end without verbal explanation and still understand the story?"*
+
+If the answer is yes, Prototype v0.1 succeeded. Everything after that is polish.
+
+**Gate:** Prototype Objectives document exists. Success criterion is written. Builder has read it.
+
+---
+
+## Stage 7: Prototype
 
 **Purpose:** Generate the first interactive version of the presentation using the PAS as the build specification.
 
@@ -275,12 +295,13 @@ See `docs/presentation-architecture-specification.md` for the full PAS structure
 | 3. Blueprint | Content strategy, domain knowledge | content-outline.md | Blueprint |
 | 4. PAS | Experience architecture | presentation-architecture-spec.md | PAS |
 | 5. Architecture Review | Validate intent before building | Approved PAS | — |
-| 6. Prototype | Generate interactive version | index.html | Prototype |
-| 7. Experience Review | Validate execution after building | Reviewed prototype | — |
-| 8. Stakeholder Review | External checkpoint | Approved narrative | — |
-| 9. Design Refinement | Polish and resolve feedback | Refined prototype | — |
-| 10. Demo Buildout | Prepare interactive elements | demo-plan.md, tested demos | — |
-| 11. Speaker Notes | Finalize delivery prep | speaker-notes.md | — |
-| 12. Rehearsal | Practice delivery | Full run-through completed | — |
-| 13. Delivery | Deliver | Delivered presentation | Production |
-| 14. Archive | Capture and carry forward | Retrospective, tagged repo | Archive |
+| 6. Prototype Objectives | Define what v0.1 validates | prototype-objectives.md | — |
+| 7. Prototype | Generate interactive version | slides/index.html | Prototype |
+| 8. Experience Review | Validate execution after building | Reviewed prototype | — |
+| 9. Stakeholder Review | External checkpoint | Approved narrative | — |
+| 10. Design Refinement | Polish and resolve feedback | Refined prototype | — |
+| 11. Demo Buildout | Prepare interactive elements | demo-plan.md, tested demos | — |
+| 12. Speaker Notes | Finalize delivery prep | speaker-notes.md | — |
+| 13. Rehearsal | Practice delivery | Full run-through completed | — |
+| 14. Delivery | Deliver | Delivered presentation | Production |
+| 15. Archive | Capture and carry forward | Retrospective, tagged repo | Archive |

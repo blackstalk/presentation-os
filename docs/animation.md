@@ -92,6 +92,27 @@ This approach:
 
 ---
 
+## Fragments vs. Separate Slides for Conceptual Models
+
+**When building a single conceptual model, prefer progressive fragments on one slide over multiple separate slides whenever preserving spatial context improves comprehension.**
+
+The reason: every slide navigation resets the audience's spatial reference. When a diagram builds across five separate slides, the audience must mentally reconstruct where each new element fits in the whole picture — the visual context is gone. When the same diagram builds across four fragments on one slide, the audience watches the model emerge without losing orientation.
+
+**Use fragments (one slide) when:**
+- The audience needs to hold the growing picture in mind as each piece is added
+- The diagram is a single coherent model (a map, an ecosystem, a hierarchy)
+- The reveal is building toward a moment of synthesis — the "Aha!" lands on the same slide it was built on
+- The speaker is narrating the build, not introducing a new topic
+
+**Use separate slides when:**
+- Each step introduces a genuinely new concept that requires its own framing
+- The diagram is a sequence (before → after), not a building model
+- The audience needs to absorb one idea fully before seeing the next
+
+**Rule:** One conceptual model = one slide. The fragment count is how complex the model is, not how many slides it needs.
+
+---
+
 ## Motion Safety
 
 Before finalizing any animation sequence:
